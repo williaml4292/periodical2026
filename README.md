@@ -1,6 +1,6 @@
 
 # Chemistry Periodical 2026
-by **AP Chemistry c 2025-2026**
+by **AP Chemistry 2025-2026**
 
 ## What is the Periodical?
 We are AP Chemistry students at the High School of Telecommunication Arts and Technology. We are creating our own website covering all content we have learned throughout the school year. This includes structures, reactions, kinetics and even thermochemistry. Our goal and reason for making this website is to have more review resources for AP Chemistry classes in the years that follow.
