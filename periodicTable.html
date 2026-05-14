@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            /* CSS */
+
+        </style>
+
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- HTML -->
+        <h1 id = "H">H</h1>
+        <h1 id = "He">He</h1>
+
+        <p> Description</p>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+        <script>
+            // JS
+            var h = document.querySelector("#H")
+            var he = document.querySelector("#He")
+            var arrayOfStuff = []
+            // var descriptionH = "H is..."
+            // var descriptionHe = "He is something..."
+            arrayOfStuff.push(h)
+            arrayOfStuff.push(he)
+            var atomicName;
+            var description;
+            for (var i = 0; i < arrayOfStuff.length;i++){
+                arrayOfStuff[i].addEventListener('click',function(event){
+                    // console.log(arrayOfStuff)
+                    description = arrayOfStuff[i].innerHTML
+                    // document.querySelector('p').innerHTML = description
+                    console.log(description)
+                })
+            }
+            function setup() {
+                createCanvas(800, 600);
+            }
+
+            function draw() {
+
+            }
+
+        </script>
+    </body>
+</html>
