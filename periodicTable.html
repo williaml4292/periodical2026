@@ -27,12 +27,10 @@
             var he = document.querySelector("#He")
             var arrayOfStuff = []
             // var descriptionH = "H is..."
-            // var descriptionHe = "He is something..."
-            arrayOfStuff.push(h)
-            arrayOfStuff.push(he)
+            // var descriptionHe = "He is something...
             var atomicName;
             var description;
-            arrayOfStuff.forEach(function(eachElement){
+            document.querySelectorAll('h1').forEach(function(eachElement){
                 eachElement.addEventListener("click", function(event){
                     description = event.target.value
                     document.querySelector('p').innerHTML = description
