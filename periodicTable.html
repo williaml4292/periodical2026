@@ -15,24 +15,23 @@
     </head>
     <body>
         <!-- HTML -->
-        <h1 id = "H" data-desc = "H is...">H</h1>
-        <h1 id = "He" data-desc = "He is...">He</h1>
+        <h1 id = "H" data-desc = "H is..." data-atomic-number = 1 data-symbol = "He">Hydrogen</h1>
+        <h1 id = "He" data-desc = "He is..." data-atomic-number = 2 data-symbol = "He">Helium</h1>
 
         <p> Description</p>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
         <script>
             // JS
-            var h = document.querySelector("#H")
-            var he = document.querySelector("#He")
-            var arrayOfStuff = []
-            // var descriptionH = "H is..."
-            // var descriptionHe = "He is something...
-            var atomicName;
+            var atomicName
+            var atomicSymbol;
+            var atomicNumber
             var description;
             document.querySelectorAll('h1').forEach(function(eachElement){
                 eachElement.addEventListener("click", function(event){
-                    description = event.target.data-desc
+                    description = event.target.dataset.desc
+                    atomicSymbol = event.target.dataset.symbol
+                    atomicNumber = event.target.dataset.atomic.number
                     document.querySelector('p').innerHTML = description
                 })
             })
