@@ -34,7 +34,7 @@
             var description;
             arrayOfStuff.forEach(function(eachElement){
                 eachElement.addEventListener("click", function(event){
-                    description = event.target.value.desc
+                    description = event.target.value
                     document.querySelector('p').innerHTML = description
                 })
             })
