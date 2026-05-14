@@ -45,7 +45,7 @@
                 <div class="sec">
                     <h1>Metalloids</h1>
                 </div>
-                <div classs="sec">
+                <div classs="sec" id="temp">
                     <h1>Nonmetals</h1>
                     <div class="elements">
                         <span id = "H" data-desc = "H is..." data-atomic-number = 1 data-symbol = "H" data-atomic-name = "Hydrogen">H</span>
@@ -67,11 +67,25 @@
         <script>
             // JS
 
-            const elements = [{}]
+            const elements = [{
+                atomicNumber: 1,
+                symbol: "H"
+            },
+        {
+            atomicNumber: 2,
+            symbol: "He"
+        }]
             var atomicName
             var atomicSymbol;
             var atomicNumber
             var description;
+            elements.forEach(function (el) {
+                const newSpan = document.createElement("span");
+                newSpan.innerHTML = el.atomicNumber;
+                newSpan.id = el.atomicNumber;
+                const temp = document.querySelector("#temp");
+                temp.appendChild(newSpan);
+            })
             document.querySelectorAll('span').forEach(function(eachElement){
                 eachElement.addEventListener("click", function(event){
                     atomicName = event.target.dataset.atomicName
