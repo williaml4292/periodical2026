@@ -15,26 +15,40 @@
                 width: 100px;
             }
 
+            .idk {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .sec {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .elements {
+                margin-top: 30px;
+            }
+
         </style>
 
         <title>Title</title>
     </head>
     <body>
         <!-- HTML -->
-         <div class = "container">
-            <div class = "row">
-                <div class = "col-md-4">
+         <div class = "idk">
+                <div class="sec">
                     <h1>Metals</h1>
                 </div>
-                <div class = "col-md-4">
+                <div class="sec">
                     <h1>Liquids</h1>
                 </div>
-                <div class = "col-md-4">
+                <div classs="sec">
                     <h1>Nonmetals</h1>
-                    <span id = "H" data-desc = "H is..." data-atomic-number = 1 data-symbol = "H" data-atomic-name = "Hydrogen">H</span>
-                    <span id = "He" data-desc = "He is..." data-atomic-number = 2 data-symbol = "He" data-atomic-name = "Helium">He</span>
+                    <div class="elements">
+                        <span id = "H" data-desc = "H is..." data-atomic-number = 1 data-symbol = "H" data-atomic-name = "Hydrogen">H</span>
+                        <span id = "He" data-desc = "He is..." data-atomic-number = 2 data-symbol = "He" data-atomic-name = "Helium">He</span>
+                    </div>
                 </div>
-            </div>
         </div>
             <!-- <span id = "H" data-desc = "H is..." data-atomic-number = 1 data-symbol = "H" data-atomic-name = "Hydrogen">H</span>
             <span id = "He" data-desc = "He is..." data-atomic-number = 2 data-symbol = "He" data-atomic-name = "Helium">He</span> -->
