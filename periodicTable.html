@@ -15,8 +15,8 @@
                 padding: 20px 20px;
                 margin-top: 50px;
                 border: 2px solid black;
-                width: 100px;
-                height: 150px;
+                width: 20px;
+                height: 30px;
                 cursor: pointer;
             }
 
@@ -25,7 +25,6 @@
                 width: 100%;
                 justify-content: space-between;
                 padding: 0px 50px;
-                height: 100%;
             }
             .sec {
                 display: flex;
@@ -34,8 +33,7 @@
 
             .elements {
                 display: flex;
-                margin-top: 30px;
-                gap: 10px;
+                gap: 2px;
             }
 
         </style>
@@ -45,15 +43,19 @@
     <body>
         <!-- HTML -->
          <div class = "idk">
-                <div class="sec">
+                <div class="sec metals">
                     <h1>Metals</h1>
+                    <div class="elements temp" id="metals">
+                    </div>
                 </div>
-                <div class="sec">
+                <div class="sec metalloids">
                     <h1>Metalloids</h1>
+                    <div class="elements temp" id="metalloids">
+                    </div>
                 </div>
-                <div classs="sec" id="temp">
+                <div classs="sec">
                     <h1>Nonmetals</h1>
-                    <div class="elements">
+                    <div class="elements temp" id="nonmetals">
                     </div>
                 </div>
         </div>
@@ -75,14 +77,23 @@
                 name: "Hydrogen",
                 atomicNumber: 1,
                 symbol: "H",
-                description: "H is .."
+                description: "H is ..",
+                type: "nonmetal"
             },
         {
             name: "Helium",
             atomicNumber: 2,
             symbol: "He",
-            description: "He is ..."
-        }, ]
+            description: "He is ...",
+            type: "nonmetal"
+        },
+    {
+        name: "Aluminum",
+        atomicNumber: 13,
+        symbol: "Al",
+        description: "Al is ....",
+        type: "metalloids"
+    } ]
             var atomicName
             var atomicSymbol;
             var atomicNumber
@@ -95,8 +106,13 @@
                 newSpan.setAttribute("data-symbol", el.symbol);
                 newSpan.setAttribute("data-desc", el.description);
                 newSpan.setAttribute("data-atomic-name", el.name);
-                const temp = document.querySelector("#temp");
-                temp.appendChild(newSpan);
+                const metalloids = document.querySelector("#metalloids");
+                const nonmetals = document.querySelector("#nonmetals");
+                if (el.type === "metalloids") {
+                    metalloids.appendChild(newSpan);
+                } else {
+                nonmetals.appendChild(newSpan);
+                }
             })
             document.querySelectorAll('span').forEach(function(eachElement){
                 eachElement.addEventListener("click", function(event){
