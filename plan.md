@@ -1,14 +1,13 @@
 # Plan
 
 * [ ] Homepage 
-    * [ ] Top part of Element of Periodic Table links & table
+    * [ ] Top section: Show the element of the day and a button to go to the elements page
     * [ ] Display Units
     * [ ] Credits
 
 * [ ] Template for Units
     * [ ] Navbar 
     * [ ] Footer
-    * [ ] 
 
 * [ ] CSS
     * [ ] fonts
