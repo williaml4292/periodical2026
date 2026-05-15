@@ -180,8 +180,14 @@
                     else if (typeOfElement == "metalloid"){
                         for (var x = 10;x < width - 5;x += 12){
                             for (var y = height * 0.75;y < height;y += 10){
-                                fill(000000)
-                                ellipse(x + random(-10, 10),y + random(-10,10),10)
+                                ellipse(x + random(-5, 5),y + random(-5,5),10)
+                            }
+                        }
+                    }
+                    else if (typeOfElement == "nonmetal"){
+                        for (var x = 10;x < width - 5;x += 12){
+                            for (var y = height * 0.75;y < height;y += 10){
+                                ellipse(x + random(-5, 5),y + random(-5,5),10)
                             }
                         }
                     }
