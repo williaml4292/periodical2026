@@ -92,8 +92,15 @@
         atomicNumber: 13,
         symbol: "Al",
         description: "Al is ....",
-        type: "metalloids"
-    } ]
+        type: "metalloid"
+    },
+    {
+        name:"Lithium",
+        atomicNumber: 3,
+        symbol: "Li",
+        description: "Li is...",
+        type: "metal"
+    }]
             var atomicName
             var atomicSymbol;
             var atomicNumber
@@ -108,10 +115,13 @@
                 newSpan.setAttribute("data-atomic-name", el.name);
                 const metalloids = document.querySelector("#metalloids");
                 const nonmetals = document.querySelector("#nonmetals");
-                if (el.type === "metalloids") {
+                if (el.type === "metalloid") {
                     metalloids.appendChild(newSpan);
-                } else {
-                nonmetals.appendChild(newSpan);
+                } else if (el.type === "nonmetal"){
+                    nonmetals.appendChild(newSpan);
+                }
+                else{
+                    metals.appendChild(newSpan)
                 }
             })
             document.querySelectorAll('span').forEach(function(eachElement){
