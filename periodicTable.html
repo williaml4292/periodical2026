@@ -26,12 +26,9 @@
                 justify-content: space-between;
                 padding: 0px 50px;
             }
-            /* .infoCanvas {
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                padding: 0px 100px;
-            } */
+            .top{
+                margin-top: 1vw
+            }
             .sec {
                 display: flex;
                 flex-direction: column;
@@ -75,14 +72,14 @@
                     </div>
                 </div>
         </div>
-        <div class = "infoCanvas">
+        <div style = "display:flex">
              <div class = "information sec">
             <h2 id = "name"></h2>
             <h2 id = "symbol"></h2>
             <h2 id= "number"></h2>
             <p id = "description"></p>
               </div>
-              <div id = "theCanvas" sec></div>
+              <div id = "theCanvas" class = "top"></div>
         </div>
          <!-- <div class = "information">
             <h2 id = "name"></h2>
@@ -160,7 +157,7 @@
                 })
             })
             function setup() {
-                var canvas = createCanvas(800, 600);
+                var canvas = createCanvas(700, 440);
                 canvas.parent("theCanvas")
                 background(0,0,255)
             }
