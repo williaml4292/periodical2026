@@ -125,6 +125,8 @@
             var atomicSymbol;
             var atomicNumber
             var description;
+            var clicked = false
+            var typeOfElement;
             elements.forEach(function (el) {
                 const newSpan = document.createElement("span");
                 newSpan.innerHTML = el.symbol;
@@ -133,6 +135,7 @@
                 newSpan.setAttribute("data-symbol", el.symbol);
                 newSpan.setAttribute("data-desc", el.description);
                 newSpan.setAttribute("data-atomic-name", el.name);
+                newSpan.setAttribute("data-type",el.type)
                 const metalloids = document.querySelector("#metalloids");
                 const nonmetals = document.querySelector("#nonmetals");
                 if (el.type === "metalloid") {
@@ -150,13 +153,15 @@
                     atomicSymbol = event.target.dataset.symbol
                     atomicNumber = event.target.dataset.atomicNumber
                     description = event.target.dataset.desc
+                    typeOfElement = event.target.dataset.type
+                    clicked = true
                     document.querySelector('#name').innerHTML = "Atomic Name: " + atomicName
                     document.querySelector('#symbol').innerHTML = "Atomic Symbol: " + atomicSymbol
                     document.querySelector('#number').innerHTML = "Atomic Number: " + atomicNumber
                     document.querySelector('#description').innerHTML = description
                 })
             })
-            var clicked = false
+
             function setup() {
                 var canvas = createCanvas(700, 440);
                 canvas.parent("theCanvas")
@@ -164,7 +169,22 @@
 
             function draw() {
                 if (clicked == true){
-                    if ()
+                    background(200)
+                    if (typeOfElement == "metal"){
+                        for (var x = 10;x < width - 5;x += 12){
+                            for (var y = height * 0.75;y < height;y += 10){
+                                ellipse(x,y,10)
+                            }
+                        }
+                    }
+                    else if (typeOfElement == "metalloid"){
+                        for (var x = 10;x < width - 5;x += 12){
+                            for (var y = height * 0.75;y < height;y += 10){
+                                fill(000000)
+                                ellipse(x + random(-10, 10),y + random(-10,10),10)
+                            }
+                        }
+                    }
                 }
             }
 
